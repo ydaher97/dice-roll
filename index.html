@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+   
+
+    <div class="start-game"  id="start-game-section">
+        <ul>
+            <li>a player rolls 2 dice as many times as he
+                wishes</li>
+            <li>if the player rolls a double six all his round’s score
+                gets lost.</li>
+            <li>A player can choose to ‘Hold’, which means that his
+                round’s score gets added to his global score.</li>
+            
+        </ul>
+        <p>please select a target score</p>
+        <input type="number" id="final-score" placeholder="Enter final score">
+        
+        <button id="start-game-button" onclick="startGame()" disabled>Start Game</button>
+
+        <div>
+            <label for="game-mode">Select game mode:</label>
+            <select id="game-mode" onchange="toggleAI()">
+                <option value="1v1">1 vs 1</option>
+                <option value="ai">AI</option>
+            </select>
+        </div>
+    </div>
+
+    
+
+    <div class="game-container" id="game-container" style="display: none;">
+        <div class="turn">
+            <h3 id="turn"></h3>
+            <p id="player1-wins">Player 1 Wins: 0</p>
+            <p id="player2-wins">Player 2 Wins: 0</p>
+        </div>
+
+        <div id="global-score">
+            Global Score:
+        </div>
+        <div class="game-items">
+            <div class="player-panel active" id="player1-panel">
+                <h2>player 1</h2>
+                <p id="player1-global-score">Global Score: 0</p>
+                <p id="player1-current-score">Current Score: 0</p>
+
+            </div>
+    
+            <div class="dice" id="dice">
+                <img src="./Dice_Game_Starter-main/dice-1.png" id="dice1" alt="dice 1">
+                <img src="/Dice_Game_Starter-main/dice-5.png" id="dice2" alt="dice 2">
+    
+                <button id="roll-btn" onclick="rollDice()">Roll</button>
+                <button id="hold-btn" onclick="hold()">Hold</button>
+            </div>
+    
+            <div class="player-panel" id="player2-panel">
+                <h2 id="ai">player 2</h2>
+                <p id="player2-global-score">Global Score: 0</p>
+
+                <p id="player2-current-score">Current Score: 0</p>
+            </div>
+        </div>
+       
+       
+    </div>
+
+    <div class="score-board" id="score-container">
+        <h3>do you want a rematch</h3>
+        <button onclick=" resetGame()">no</button>
+        <button onclick="rematch()">yes</button>
+
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>

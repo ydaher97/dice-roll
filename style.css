@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  #start-game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+  #start-game-section p {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #start-game-section button {
+    padding: 10px 20px;
+    margin: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  #start-game-section button:hover {
+    background-color: #45a049;
+  }
+  
+  
+  .game-container {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .player-panel.active {
+    background-color: #e0f7fa;  
+    border: 2px solid #0288d1; 
+  }
+  
+  .game-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .player-panel {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 10px;
+    background-color: #fff;
+   height: 400px;
+   width: 250px;
+  }
+  
+  .player-panel p {
+    margin: 120px 0;
+    font-size: 1.5em;
+  }
+
+  #player1-global-score,
+  #player2-global-score{
+    font-weight: bold;
+  }
+
+  #player2-current-score,
+  #player1-current-score{
+    border:1px solid black;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+  }
+  
+  .dice {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 10px;
+
+  }
+  
+  #roll-btn,
+  #hold-btn {
+    padding: 20px 30px;
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  #roll-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+  }
+  
+  #roll-btn:hover {
+    background-color: #45a049;
+  }
+  
+  #hold-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+  }
+  
+  #hold-btn:hover {
+    background-color: #d32f2f;
+  }
+
+
+  .score-board{
+    display: none;
+    text-align: center;
+    background-color: #f0f0f0;
+  }
+
+  .score-board button{
+    padding: 10px 40px;
+    margin: 10px 20px;
+    border-radius: 10px;
+  }
+ 
+  .score-board h3{
+    font-weight: bold;
+    margin-top: 142px;
+    padding-top: 55px;
+  }
+
+  .score-board button:hover{
+    background-color: #0288d1;
+  }
